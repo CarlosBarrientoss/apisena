@@ -25,6 +25,16 @@ public class ProductoMapper extends GenericMapper<Producto, ProductoDTO>{
 
     @Override
     public Producto toEntity(ProductoDTO dto) {
-        return null;
+        if (dto == null){
+            return null;
+        }
+
+        return Producto.builder()
+                .id(dto.getId())
+                .codigo(dto.getCodigo())
+                .nombre(dto.getNombre())
+                .precioUnitario(dto.getPrecioUnitario())
+                .unidadId(dto.getUnidadId())
+                .build();
     }
 }
