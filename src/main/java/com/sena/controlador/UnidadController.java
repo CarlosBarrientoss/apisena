@@ -26,7 +26,7 @@ public class UnidadController {
         return ResponseEntity.ok(service.findAll());
     }
 
-    //ENDPOINT
+    //ENDPOINT:
     //GET http://localhost:8090/unidades/cod
     @GetMapping("/{id}")
     public ResponseEntity<Unidad> findById(@PathVariable String id){
